@@ -1,35 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zedait Development</title>
-  <link rel="stylesheet" href="style.css">
-  
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2784323556120707"
-     crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2784323556120707" crossorigin="anonymous"></script>
 </head>
 <body>
-<header class="header">
-  <img src="ZedaitLogo.png" alt="Zedait Logo" class="logo">
-</header>
+  <header class="header">
+    <img src="ZedaitLogo.png" alt="Zedait Logo" class="logo" />
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <div class="dropdown-menu" id="dropdownMenu">
+      <div id="guestMenu">
+        <a href="#" onclick="showLogin()">Login</a>
+        <a href="#" onclick="showSignup()">Sign Up</a>
+      </div>
+      <div id="userMenu" style="display: none;">
+        <a href="#" onclick="showProfile()">Profile</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </div>
+    </div>
+  </header>
 
-<main class="main-content">
-  <section class="intro">
-    <h2>Zedait Development</h2>
-    <p>We create advanced Discord bots, high-quality GFX designs, and full-stack projects using modern technologies. From mobile game development to web design — we work with Lua, Python, Node.js, HTML, and CSS to bring your ideas to life.</p>
-  </section>
+  <main class="main-content" id="mainContent">
+    <section class="intro">
+      <h2>Welcome to Zedait Development</h2>
+      <p>We build Discord bots, GFX designs, and full-stack apps with Lua, Python, Node.js, and more.</p>
+    </section>
+    <section class="links">
+      <a href="https://github.com/Zedait" target="_blank">GitHub</a>
+      <a href="https://discord.gg/NvvPcRrZFE" target="_blank">Join Our Discord</a>
+      <a href="mailto:zedaitdevelopment@gmail.com">zedaitdevelopment@gmail.com</a>
+    </section>
+  </main>
 
-  <section class="links">
-    <a href="https://github.com/Zedait" target="_blank">GitHub</a>
-    <a href="https://discord.gg/NvvPcRrZFE" target="_blank">Join Our Discord</a>
-    <a href="mailto:zedaitdevelopment@gmail.com">zedaitdevelopment@gmail.com</a>
-  </section>
-</main>
+  <div class="modal" id="authModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="authForms">
+        <form id="loginForm">
+          <h3>Login</h3>
+          <input type="text" id="loginUsername" placeholder="Username" required />
+          <input type="password" id="loginPassword" placeholder="Password" required />
+          <button type="submit">Login</button>
+        </form>
 
-<footer class="footer">
-  <p>&copy; 2025 Zedait Development. All rights reserved.</p>
-</footer>
+        <form id="signupForm" style="display: none;">
+          <h3>Sign Up</h3>
+          <input type="text" id="signupUsername" placeholder="Username" required />
+          <input type="password" id="signupPassword" placeholder="Password" required />
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="profileModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeProfile()">&times;</span>
+      <h3>Your Profile</h3>
+      <p><strong>Username:</strong> <span id="profileUsername"></span></p>
+      <textarea id="bioInput" placeholder="Your bio..."></textarea>
+      <button onclick="saveProfile()">Save</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Zedait Development. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
