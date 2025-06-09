@@ -1,37 +1,156 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zedait Development</title>
-  <link rel="stylesheet" href="style.css">
-  
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2784323556120707"
-     crossorigin="anonymous"></script>
-  
-  <meta name="copyright" content="© 2025 Zedait Development. All rights reserved.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zedait - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Oxanium', sans-serif;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(145deg, #1a0000, #330000);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #ff4c4c;
+      text-shadow: 0 0 10px #ff4c4c66;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .skills-card, .project-card {
+      background: linear-gradient(145deg, #1a0000, #330000);
+      border: 2px solid #550000;
+      border-radius: 20px;
+      padding: 2rem 3rem;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 0 20px rgba(128, 0, 0, 0.4);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skills-card:hover, .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 76, 76, 0.6), 0 0 40px rgba(255, 0, 0, 0.3);
+    }
+
+    .skills-card h2, .project-card h2 {
+      font-size: 2rem;
+      color: #ff4c4c;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 10px #ff4c4c66;
+    }
+
+    .skills-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills-list li {
+      font-size: 1.2rem;
+      padding: 0.5rem 0;
+      color: #ddd;
+      border-bottom: 1px solid #440000;
+    }
+
+    .skills-list li:last-child {
+      border-bottom: none;
+    }
+
+    .skills-list li::before {
+      content: "•";
+      color: #ff4c4c;
+      margin-right: 0.6rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background-color: #ff4c4c;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #cc0000;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
-<header class="header">
-  <img src="ZedaitLogo.png" alt="Zedait Logo" class="logo">
-</header>
 
-<main class="main-content">
-  <section class="intro">
-    <h2>Zedait Development</h2>
-    <p>We create advanced Discord bots, high-quality GFX designs, and full-stack projects using modern technologies. From mobile game development to web design — we work with Lua, Python, Node.js, HTML, and CSS to bring your ideas to life.</p>
-  </section>
+  <header>
+    <h1>Zedait Portfolio</h1>
+    <p></p>
+  </header>
 
-  <section class="links">
-    <a href="https://github.com/Zedait" target="_blank">GitHub</a>
-    <a href="https://discord.gg/W9fnPMtPg2" target="_blank">Join Our Discord</a>
-    <a href="mailto:zedaitdevelopment@gmail.com">zedaitdevelopment@gmail.com</a>
+  <div class="container">
+    <div class="skills-card">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>Java</li>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>Discord.js</li>
+        <li>Node.js</li>
+        <li>MongoDB</li>
+      </ul>
+    </div>
 
-    </section>
-</main>
+    <div class="project-card">
+      <h2>Projelerim</h2>
+      <p>Roblox sistemleri, Discord botları, güvenlik sistemleri ve daha fazlası.</p>
+      <a href="https://github.com/Zedait" class="btn" target="_blank">GitHub'ı Gör</a>
+    </div>
 
-<footer class="footer">
-  <p>&copy; 2025 Zedait Development. All rights reserved.</p>
-</footer>
+    <div class="project-card">
+      <h2>İletişim</h2>
+      <p>Bir projen mi var? Bana ulaş: <strong>discord.gg/zedait</strong></p>
+      <a href="https://discord.gg/W9fnPMtPg2" class="btn" target="_blank">Mesaj Gönder</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Zedait Development. Tüm hakları saklıdır.
+  </footer>
+
 </body>
 </html>
