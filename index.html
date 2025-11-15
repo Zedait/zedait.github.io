@@ -6,12 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zedait Portfolio — Maintenance</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+        :root{
+          --bg:#0b0b0e;
+          --elev:#111216;
+          --muted:#a1a1aa;
+          --text:#e7e7ea;
+          --accent:#facc15;
+          --accent-2:#ffd43b;
+          --ring: rgba(250, 204, 21, 0.35);
+          --radius:18px;
+          --shadow:0 10px 30px rgba(0,0,0,.35);
+          --shadow-2:0 20px 60px rgba(0,0,0,.45);
+        }
+
+        *{box-sizing:border-box}
+        html,body{height:100%}
+
+        body{
+          margin:0;
+          background:radial-gradient(1200px 600px at 80% -10%, rgba(250,204,21,.07), transparent 60%),
+                     radial-gradient(900px 600px at -10% 20%, rgba(250,204,21,.08), transparent 60%),
+                     var(--bg);
+          color:var(--text);
+          font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          padding:20px;
+        }
+
+        .maint-wrap{
+          width:100%;
+          max-width:540px;
+        }
+
+        .maint-card{
+          background:var(--elev);
+          border:1px solid #23232a;
+          padding:30px 26px;
+          border-radius:var(--radius);
+          box-shadow:var(--shadow-2);
+          text-align:center;
+        }
+
+        .maint-title{
+          font-size:32px;
+          font-weight:700;
+          margin:0 0 12px;
+          color:var(--accent-2);
+        }
+
+        .maint-sub{
+          font-size:16px;
+          color:var(--muted);
+          margin-bottom:26px;
+          line-height:1.6;
+        }
+
+        .maint-contact p{
+          margin:6px 0;
+          font-size:15px;
+          color:var(--text);
+        }
+
+        .maint-contact strong{
+          color:var(--accent);
+        }
+    </style>
 </head>
+
 <body>
 
     <div class="maint-wrap">
-
         <div class="maint-card">
             <h1 class="maint-title">Site Bakım Modunda</h1>
             <p class="maint-sub">Sistem üzerinde geliştirme çalışmaları yapılmaktadır. Kısa süre içinde yeniden erişilebilir olacaktır.</p>
@@ -21,9 +91,7 @@
                 <p><strong>Discord:</strong> zedait701</p>
             </div>
         </div>
-
     </div>
 
 </body>
 </html>
-
