@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İçerik Bulunamadı - Zedait</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        :root{
+          --bg:#0b0b0e;
+          --elev:#111216;
+          --muted:#a1a1aa;
+          --text:#e7e7ea;
+          --accent:#facc15;
+          --accent-2:#ffd43b;
+          --ring: rgba(250, 204, 21, 0.35);
+          --radius:18px;
+          --shadow:0 10px 30px rgba(0,0,0,.35);
+          --shadow-2:0 20px 60px rgba(0,0,0,.45);
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+          margin:0;
+          background:radial-gradient(1200px 600px at 80% -10%, rgba(250,204,21,.07), transparent 60%),
+                     radial-gradient(900px 600px at -10% 20%, rgba(250,204,21,.08), transparent 60%),
+                     var(--bg);
+          color:var(--text);
+          font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          padding:20px;
+        }
+        .maint-wrap{
+          width:100%;
+          max-width:540px;
+        }
+        .maint-card{
+          background:var(--elev);
+          border:1px solid #23232a;
+          padding:40px 26px;
+          border-radius:var(--radius);
+          box-shadow:var(--shadow-2);
+          text-align:center;
+        }
+        .maint-title{
+          font-size:64px;
+          font-weight:700;
+          margin:0 0 8px;
+          color:var(--accent-2);
+        }
+        .maint-sub{
+          font-size:16px;
+          color:var(--muted);
+          margin-bottom:30px;
+          line-height:1.6;
+        }
+        .home-btn{
+          display:inline-block;
+          background:var(--accent);
+          color:#000;
+          text-decoration:none;
+          padding:12px 28px;
+          border-radius:10px;
+          font-weight:600;
+          font-size:15px;
+          transition:opacity 0.2s;
+        }
+        .home-btn:hover{
+          opacity:0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="maint-wrap">
+        <div class="maint-card">
+            <h1 class="maint-title">404</h1>
+            <p class="maint-sub">Aradığınız sayfa bulunamadı veya taşınmış olabilir.</p>
+            <a href="https://zedaitdev.com" class="home-btn">Ana Sayfaya Dön</a>
+        </div>
+    </div>
+</body>
+</html>
